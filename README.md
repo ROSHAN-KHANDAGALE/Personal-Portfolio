@@ -6,7 +6,7 @@ A modern, responsive personal portfolio website built with **React**. Features a
 
 ## 🔗 Live Demo
 
-> Replace this with your deployed URL once hosted.
+> https://roshan-khandagale.github.io/Personal-Portfolio/
 
 ---
 
