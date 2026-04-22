@@ -1,0 +1,76 @@
+/* src/components/Experience/Experience.module.css */
+
+.experience { background: var(--bg); }
+
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+.item:last-child { border-bottom: none; margin-bottom: 0; }
+
+.dot {
+  position: absolute;
+  left: -2rem; top: 6px;
+  width: 10px; height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-family: var(--fd);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.role   { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-bottom: 0.25rem; }
+.location { font-size: 0.72rem; color: var(--text-dim); font-family: var(--fm); margin-bottom: 1rem; }
+
+.period {
+  font-family: var(--fm);
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  background: rgba(0,220,130,0.1);
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,220,130,0.2);
+  white-space: nowrap;
+}
+
+.points { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.points li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding-left: 1rem;
+  position: relative;
+}
+.points li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+}

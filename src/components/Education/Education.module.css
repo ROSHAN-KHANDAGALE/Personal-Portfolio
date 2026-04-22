@@ -1,0 +1,58 @@
+.education { background: var(--bg2); }
+
+.eduGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.eduCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 2rem;
+  transition: all var(--tr);
+}
+.eduCard:hover {
+  border-color: var(--border-a);
+  box-shadow: 0 8px 30px var(--glow);
+  transform: translateY(-3px);
+}
+
+.eduIcon  { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.degree   { font-family: var(--fd); font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+.uni      { font-size: 0.9rem; color: var(--accent2); margin-bottom: 0.5rem; }
+.period   { font-family: var(--fm); font-size: 0.78rem; color: var(--text-dim); }
+
+.certsTitle {
+  font-family: var(--fd);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.certsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.certCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all var(--tr);
+}
+.certCard:hover { border-color: var(--border-a); transform: translateX(4px); }
+
+.certIcon   { font-size: 1.5rem; flex-shrink: 0; }
+.certTitle  { font-size: 0.92rem; color: var(--text); font-weight: 600; font-family: var(--fd); }
+.certIssuer { font-size: 0.78rem; color: var(--text-dim); font-family: var(--fm); margin-top: 2px; }
+
+@media (max-width: 900px) {
+  .eduGrid { grid-template-columns: 1fr; }
+}
