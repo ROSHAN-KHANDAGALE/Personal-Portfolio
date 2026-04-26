@@ -10,7 +10,7 @@ export const NAV_LINKS = [
 export const SKILLS = [
   {
     icon: "🐍",
-    title: "Backend",
+    title: "Backend & Frameworks",
     tags: [
       "Python",
       "JavaScript ES6+",
@@ -26,18 +26,26 @@ export const SKILLS = [
     tags: [
       "LLMs + Integration",
       "RAG",
-      "LangChain",
       "Hugging Face",
       "Transformers",
       "Embeddings",
-      "Prompt Engineering",
       "Vector Databases",
+      "Prompt Engineering",
+      "NLP",
+      "Agentic AI",
+      "LangChain",
+      "LangGraph"
     ],
   },
   {
     icon: "🗄️",
     title: "Databases",
-    tags: ["PostgreSQL", "MongoDB", "MySQL"],
+    tags: [
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Vector Store",
+    ],
   },
   {
     icon: "🔌",
@@ -48,12 +56,14 @@ export const SKILLS = [
       "Webhooks",
       "JWT / OAuth",
       "Pydantic",
+      "Redis",
+      "Celery",
     ],
   },
   {
     icon: "☁️",
     title: "DevOps / Cloud",
-    tags: ["Docker", "Git / GitHub", "AWS (EC2, S3)"],
+    tags: ["Docker", "Git / GitHub", "AWS (EC2, S3)", "GCP (Vertex AI)"],
   },
   {
     icon: "📊",
@@ -64,12 +74,31 @@ export const SKILLS = [
     icon: "⚡",
     title: "Methodologies",
     tags: ["Agile / Scrum", "Code Reviews", "Unit Testing"],
-  }
+  },
 ];
 
 export const PROJECTS = [
   {
     num: "01",
+    badge: "Production Ready",
+    category: ["ai", "fullstack"],
+    title: "GitHub PR ReviewBot",
+    desc: "AI-native code review agent — submit a GitHub PR URL, get a structured review with scored findings, severity-tagged issues, and a benchmark comparison against vanilla Claude.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "LLM / GenAI",
+      "Groq",
+      "ReactJS",
+      "Pydantic",
+      "Redis",
+      "Celery",
+    ],
+    github: "https://github.com/ROSHAN-KHANDAGALE/Pull-Request-Review-Pilot",
+  },
+  {
+    num: "02",
     badge: "Featured",
     category: ["fullstack"],
     title: "PDF Chatbot",
@@ -86,7 +115,7 @@ export const PROJECTS = [
     github: "https://github.com/ROSHAN-KHANDAGALE/PDF-Chatbot",
   },
   {
-    num: "02",
+    num: "03",
     badge: "Latest",
     category: ["ai", "fullstack"],
     title: "AI Database Assistant",
@@ -105,7 +134,7 @@ export const PROJECTS = [
       "https://github.com/ROSHAN-KHANDAGALE/AI-Database-Assistant-Backend",
   },
   {
-    num: "03",
+    num: "04",
     badge: null,
     category: ["backend"],
     title: "Personal Finance Tracker",
@@ -114,7 +143,7 @@ export const PROJECTS = [
     github: "https://github.com/ROSHAN-KHANDAGALE/Personal-Finance-Tracker",
   },
   {
-    num: "04",
+    num: "05",
     badge: null,
     category: ["backend"],
     title: "GitHub Webhook Tracker",
@@ -123,21 +152,12 @@ export const PROJECTS = [
     github: "https://github.com/ROSHAN-KHANDAGALE/Webhook-Tracker-Github",
   },
   {
-    num: "05",
-    badge: null,
-    category: ["ai"],
-    title: "Virtual Quiz Game",
-    desc: "Gesture-controlled quiz using OpenCV's computer vision pipeline for real-time hand gesture recognition. Maps gestures to answer selections — eliminating physical input devices via applied CV/AI.",
-    tech: ["Python", "OpenCV", "Computer Vision", "Gesture Recognition"],
-    github: "https://github.com/ROSHAN-KHANDAGALE/VirtualQuizGame-OpenCV",
-  },
-  {
     num: "06",
     badge: null,
-    category: ["fullstack"],
+    category: ["more"],
     title: "More Projects",
     desc: "Explore more of my projects on GitHub, showcasing a range of skills from backend development to AI integrations and data processing.",
-    tech: ["Python", "JavaScript", "AI", "Web Development"],
+    tech: ["Python", "JavaScript", "AI/ GenAI", "Web Development", "Production Ready"],
     github: "https://github.com/ROSHAN-KHANDAGALE?tab=repositories",
   },
 ];

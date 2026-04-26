@@ -8,6 +8,7 @@ const FILTERS = [
   { key: "ai", label: "AI / GenAI" },
   { key: "backend", label: "Backend" },
   { key: "fullstack", label: "Full Stack" },
+  { key: "more", label: "More",}
 ];
 
 export default function Projects() {
