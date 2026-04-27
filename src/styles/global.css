@@ -2,41 +2,39 @@
 
 /* ── CSS Variables ── */
 :root {
-  --bg:          #0a0a0f;
-  --bg2:         #111118;
-  --bg3:         #1a1a24;
-  --surface:     #1e1e2a;
-  --surface2:    #252535;
-  --border:      rgba(255,255,255,0.07);
-  --border-a:    rgba(0,220,130,0.3);
-  --text:        #e8e8f0;
-  --text-muted:  #7a7a9a;
-  --text-dim:    #4a4a6a;
-  --accent:      #00dc82;
-  --accent2:     #00a8ff;
-  --accent3:     #ff6b35;
-  --glow:        rgba(0,220,130,0.15);
+  /* ── Backgrounds — deep graphite, slight warm tint ── */
+  --bg:         #0e0f11;
+  --bg2:        #141618;
+  --bg3:        #1c1f23;
+  --surface:    #21252b;
+  --surface2:   #282d34;
+
+  /* ── Borders ── */
+  --border:     rgba(255, 255, 255, 0.06);
+  --border-a:   rgba(0, 210, 200, 0.35);
+
+  /* ── Typography ── */
+  --text:       #eef0f3;
+  --text-muted: #8892a0;
+  --text-dim:   #444c58;
+
+  /* ── Accent palette ── */
+  --accent:     #00d2c8;   /* electric cyan — primary */
+  --accent2:    #67e8e4;   /* light cyan — links, values */
+  --accent3:    #00a8a0;   /* deep cyan — hover */
+  --accent4:    #e2b96f;   /* warm gold — secondary highlight */
+
+  /* ── Glow ── */
+  --glow:       rgba(0, 210, 200, 0.15);
+  --glow2:      rgba(0, 210, 200, 0.08);
+
+  /* ── Fonts ── */
   --fd: 'Syne', sans-serif;
   --fm: 'Space Mono', monospace;
+
+  /* ── Misc ── */
   --r:  8px;
   --tr: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-[data-theme="light"] {
-  --bg:         #f4f4f7;
-  --bg2:        #ebebf0;
-  --bg3:        #e2e2ea;
-  --surface:    #ffffff;
-  --surface2:   #f0f0f6;
-  --border:     rgba(0,0,0,0.08);
-  --border-a:   rgba(0,160,90,0.3);
-  --text:       #12121e;
-  --text-muted: #555570;
-  --text-dim:   #aaaacc;
-  --accent:     #009955;
-  --accent2:    #0066cc;
-  --accent3:    #cc4400;
-  --glow:       rgba(0,153,85,0.1);
 }
 
 /* ── Reset ── */

@@ -34,18 +34,13 @@ export const SKILLS = [
       "NLP",
       "Agentic AI",
       "LangChain",
-      "LangGraph"
+      "LangGraph",
     ],
   },
   {
     icon: "🗄️",
     title: "Databases",
-    tags: [
-      "PostgreSQL",
-      "MongoDB",
-      "MySQL",
-      "Vector Store",
-    ],
+    tags: ["PostgreSQL", "MongoDB", "MySQL", "Vector Store"],
   },
   {
     icon: "🔌",
@@ -157,7 +152,13 @@ export const PROJECTS = [
     category: ["more"],
     title: "More Projects",
     desc: "Explore more of my projects on GitHub, showcasing a range of skills from backend development to AI integrations and data processing.",
-    tech: ["Python", "JavaScript", "AI/ GenAI", "Web Development", "Production Ready"],
+    tech: [
+      "Python",
+      "JavaScript",
+      "AI/ GenAI",
+      "Web Development",
+      "Production Ready",
+    ],
     github: "https://github.com/ROSHAN-KHANDAGALE?tab=repositories",
   },
 ];
@@ -254,5 +255,38 @@ export const CONTACT_LINKS = [
     label: "GitHub",
     value: "github.com/ROSHAN-KHANDAGALE",
     href: "https://github.com/ROSHAN-KHANDAGALE",
+  },
+];
+
+export const CURRENTLY_LEARNING = [
+  {
+    icon: "🧠",
+    title: "Agentic AI Systems",
+    description:
+      "Building multi-agent workflows using LangGraph and AutoGen — orchestrating LLM agents that plan, execute, and self-correct.",
+    tag: "AI / GenAI",
+    progress: 65, // percentage — update as you learn
+    resource: "LangGraph Docs",
+    resourceUrl: "https://langchain-ai.github.io/langgraph/",
+  },
+  {
+    icon: "🔍",
+    title: "Vector Search & RAG Optimization",
+    description:
+      "Diving deeper into advanced RAG techniques — reranking, hybrid search, and optimizing retrieval quality with pgvector and ChromaDB.",
+    tag: "AI / GenAI",
+    progress: 70,
+    resource: "LlamaIndex Docs",
+    resourceUrl: "https://docs.llamaindex.ai/",
+  },
+  {
+    icon: "☁️",
+    title: "AWS for Backend Devs",
+    description:
+      "Going beyond EC2 and S3 — exploring Lambda, SQS, API Gateway, and deploying FastAPI services on AWS.",
+    tag: "DevOps / Cloud",
+    progress: 35,
+    resource: "AWS Docs",
+    resourceUrl: "https://docs.aws.amazon.com/",
   },
 ];

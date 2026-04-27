@@ -63,9 +63,9 @@
   top: 1.25rem; right: 1.25rem;
   font-size: 0.58rem;
   padding: 3px 8px;
-  background: rgba(0,220,130,0.15);
+  background: rgba(0,210,200,0.15);
   color: var(--accent);
-  border: 1px solid rgba(0,220,130,0.3);
+  border: 1px solid rgba(0,210,200,0.3);
   border-radius: 2px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -106,13 +106,13 @@
 
 .techTags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .techTag {
-  font-size: 0.62rem;
-  padding: 3px 8px;
-  background: var(--bg3);
-  border-radius: 2px;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  background: rgba(0, 210, 200, 0.07);
+  border-radius: 3px;
   color: var(--accent2);
   font-family: var(--fm);
-  border: 1px solid rgba(0,168,255,0.2);
+  border: 1px solid rgba(0, 210, 200, 0.18);
 }
 
 @media (max-width: 768px) {

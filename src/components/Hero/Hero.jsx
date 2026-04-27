@@ -1,6 +1,7 @@
 // src/components/Hero/Hero.jsx
 import useStats from "../../hooks/Usestats";
 import styles from "./Hero.module.css";
+import useTypewriter from "../../hooks/useTypewriter";
 
 export default function Hero() {
   // Dynamically computed from data/index.js — no manual updates needed.
@@ -8,6 +9,7 @@ export default function Hero() {
   // Projects   → PROJECTS.length
   // Certs      → CERTIFICATIONS.length
   const stats = useStats();
+  const typedText = useTypewriter();
 
   return (
     <section id="home" className={styles.hero}>
@@ -20,14 +22,21 @@ export default function Hero() {
           <span className={styles.accent}>Khandagale</span>
         </h1>
 
+        <div className={styles.typewriter}>
+          <span className={styles.typedText}>{typedText}</span>
+          <span className={styles.cursor}>|</span>
+        </div>
+
         <div className={styles.titles}>
-          {["Backend Developer", "AI / GenAI Engineer", "FastAPI · Python"].map(
-            (t) => (
-              <span key={t} className={styles.pill}>
-                {t}
-              </span>
-            ),
-          )}
+          {[
+            "FastAPI · Python",
+            "LLMs · RAG · LangChain",
+            "REST APIs · Microservices",
+          ].map((t) => (
+            <span key={t} className={styles.pill}>
+              {t}
+            </span>
+          ))}
         </div>
 
         <p className={styles.desc}>

@@ -135,9 +135,9 @@
   text-align: center;
 }
 .success {
-  background: rgba(0,220,130,0.1);
+  background: rgba(0,210,200,0.1);
   color: var(--accent);
-  border: 1px solid rgba(0,220,130,0.3);
+  border: 1px solid rgba(0,210,200,0.3);
 }
 .error {
   background: rgba(255,107,53,0.1);
@@ -145,9 +145,9 @@
   border: 1px solid rgba(255,107,53,0.3);
 }
 .sending {
-  background: rgba(0,168,255,0.1);
+  background: rgba(0,210,200,0.1);
   color: var(--accent2);
-  border: 1px solid rgba(0,168,255,0.3);
+  border: 1px solid rgba(0,210,200,0.3);
 }
 
 /* ── Responsive ── */

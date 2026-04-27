@@ -135,6 +135,42 @@
   cursor: pointer;
 }
 
+/* ── Scroll Progress Bar ── */
+.progressBar {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 1001;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent3), var(--accent));
+  box-shadow: 0 0 8px var(--glow);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.1s linear;
+}
+
+.paletteHint {
+  font-family: var(--fm);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all var(--tr);
+  letter-spacing: 0.05em;
+}
+.paletteHint:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 @media (max-width: 768px) {
   .navLinks, .actions { display: none; }
   .burger { display: flex; }

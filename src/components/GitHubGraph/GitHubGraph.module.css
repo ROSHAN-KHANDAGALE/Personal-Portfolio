@@ -1,0 +1,195 @@
+.section {
+  background: var(--bg);
+  padding-top: 60px;  
+  padding-bottom: 60px;
+}
+
+.section :global(.section-header) {
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 2rem;
+  transition: border-color var(--tr), box-shadow var(--tr);
+}
+.card:hover {
+  border-color: var(--border-a);
+  box-shadow: 0 8px 40px var(--glow);
+}
+
+/* ── Header ── */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pulsing green dot */
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(1.2); }
+}
+
+.liveLabel {
+  font-family: var(--fm);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.ghLink {
+  font-family: var(--fm);
+  font-size: 0.78rem;
+  color: var(--accent2);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color var(--tr);
+}
+.ghLink:hover { color: var(--accent); }
+
+/* ── Calendar ── */
+.calendarWrap {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Override react-github-calendar default text color */
+.calendarWrap :global(.react-activity-calendar__legend-month),
+.calendarWrap :global(.react-activity-calendar__legend-weekday) {
+  fill: var(--text-dim) !important;
+  font-family: var(--fm) !important;
+  font-size: 12px !important;
+}
+
+/* ── Stats row ── */
+.statsRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.statPill {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 0.6rem 1rem;
+}
+
+.statLabel {
+  font-family: var(--fm);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.statValue {
+  font-family: var(--fd);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.accentValue { color: var(--accent); }
+
+/* ── Two column calendar layout ── */
+.calendarLayout {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* ── Left summary panel ── */
+.calendarSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex-shrink: 0;
+  min-width: 130px;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 1.25rem 0;
+}
+
+.summaryNum {
+  font-family: var(--fd);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.summaryLabel {
+  font-family: var(--fd);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.summaryPeriod {
+  font-family: var(--fm);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.summaryDivider {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+
+/* ── Right calendar ── */
+.calendarWrap {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  flex: 1;
+}
+
+/* ── Responsive — stack on mobile ── */
+@media (max-width: 768px) {
+  .calendarLayout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .calendarSummary {
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+  }
+  .summaryDivider {
+    width: 1px;
+    height: auto;
+    align-self: stretch;
+  }
+}

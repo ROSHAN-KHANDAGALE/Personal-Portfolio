@@ -299,7 +299,7 @@ All colours are CSS variables in `src/styles/global.css`:
 
 ```css
 :root {
-  --accent:  #00dc82;   /* Primary green — change this to your preferred accent */
+  --accent:  #00d2c8;   /* Primary green — change this to your preferred accent */
   --accent2: #00a8ff;   /* Blue — used for links and tech tags */
   --bg:      #0a0a0f;   /* Page background */
   --text:    #e8e8f0;   /* Primary text */

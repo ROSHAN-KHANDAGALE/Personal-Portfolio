@@ -5,9 +5,20 @@ import styles from "./Navbar.module.css";
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled,    setScrolled]    = useState(false);
   const [mobileOpen,  setMobileOpen]  = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+
+      // Calculate how far user has scrolled through the page (0–100)
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setProgress(pct);
+    };
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -39,13 +50,6 @@ export default function Navbar({ theme, toggleTheme }) {
 
         {/* Actions */}
         <div className={styles.actions}>
-          <button
-            className={styles.themeBtn}
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? "☀" : "☾"}
-          </button>
           <a
             className={styles.cvBtn}
             href={process.env.REACT_APP_CV_URL}
@@ -53,6 +57,23 @@ export default function Navbar({ theme, toggleTheme }) {
           >
             ↓ Resume
           </a>
+
+          <button
+            className={styles.paletteHint}
+            onClick={() => {
+              window.dispatchEvent(
+                new KeyboardEvent("keydown", {
+                  key: "/",
+                  metaKey: true,
+                  bubbles: true,
+                }),
+              );
+            }}
+            aria-label="Open command palette"
+            title="Command Palette (Ctrl+/)"
+          >
+            <span>⌘/</span>
+          </button>
         </div>
 
         {/* Hamburger */}
@@ -65,6 +86,13 @@ export default function Navbar({ theme, toggleTheme }) {
           <span />
           <span />
         </button>
+
+        <div className={styles.progressBar}>
+          <div
+            className={styles.progressFill}
+            style={{ width: `${progress}%` }}
+          />
+        </div>
       </nav>
 
       {/* Mobile overlay */}
