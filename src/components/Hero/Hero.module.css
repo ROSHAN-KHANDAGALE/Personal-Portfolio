@@ -8,7 +8,6 @@
   background: var(--bg);
 }
 
-/* Grid background */
 .hero::before {
   content: '';
   position: absolute;
@@ -20,7 +19,7 @@
   mask-image: radial-gradient(ellipse at 30% 50%, black 30%, transparent 70%);
 }
 
-/* Glow orb */
+
 .hero::after {
   content: '';
   position: absolute;
@@ -124,13 +123,12 @@
   letter-spacing: 0.1em;
 }
 
-/* ── Typewriter ── */
 .typewriter {
   display: flex;
   align-items: center;
   gap: 2px;
   margin: 1.25rem 0 1.5rem;
-  min-height: 2.2rem; /* prevents layout shift as text changes */
+  min-height: 2.2rem;
 }
 
 .typedText {
@@ -141,7 +139,6 @@
   letter-spacing: -0.02em;
 }
 
-/* Blinking cursor */
 .cursor {
   font-family: var(--fd);
   font-size: clamp(1.3rem, 3vw, 1.8rem);

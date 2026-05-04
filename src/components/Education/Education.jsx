@@ -5,7 +5,6 @@ export default function Education() {
   return (
     <section id="education" className={styles.education}>
       <div className="container">
-        {/* Degrees */}
         <div className="section-header reveal">
           <div className="section-tag">Academic Background</div>
           <h2 className="section-title">Education & <span>Certs</span></h2>
@@ -22,7 +21,6 @@ export default function Education() {
           ))}
         </div>
 
-        {/* Certifications */}
         <div className="section-header reveal" style={{ marginTop: "3rem", marginBottom: "1.5rem" }}>
           <div className="section-tag">Credentials</div>
           <h3 className={styles.certsTitle}>Certifications</h3>

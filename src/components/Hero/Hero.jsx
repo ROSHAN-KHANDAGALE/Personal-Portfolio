@@ -1,13 +1,8 @@
-// src/components/Hero/Hero.jsx
 import useStats from "../../hooks/Usestats";
 import styles from "./Hero.module.css";
 import useTypewriter from "../../hooks/useTypewriter";
 
 export default function Hero() {
-  // Dynamically computed from data/index.js — no manual updates needed.
-  // Years exp  → calculated from earliest EXPERIENCE startDate to today.
-  // Projects   → PROJECTS.length
-  // Certs      → CERTIFICATIONS.length
   const stats = useStats();
   const typedText = useTypewriter();
 

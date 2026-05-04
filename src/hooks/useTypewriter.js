@@ -1,4 +1,3 @@
-// src/hooks/useTypewriter.js
 import { useState, useEffect } from "react";
 
 const ROLES = [
@@ -9,14 +8,14 @@ const ROLES = [
   "FastAPI Dev",
 ];
 
-const TYPE_SPEED = 80; // ms per character while typing
-const DELETE_SPEED = 40; // ms per character while deleting
-const PAUSE_END = 1800; // ms to pause after fully typed
-const PAUSE_START = 400; // ms to pause before typing next word
+const TYPE_SPEED = 80; 
+const DELETE_SPEED = 40; 
+const PAUSE_END = 1800; 
+const PAUSE_START = 400;
 
 export default function useTypewriter(roles = ROLES) {
-  const [displayed, setDisplayed] = useState(""); // text currently shown
-  const [roleIndex, setRoleIndex] = useState(0); // which role we're on
+  const [displayed, setDisplayed] = useState(""); 
+  const [roleIndex, setRoleIndex] = useState(0); 
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -28,11 +27,9 @@ export default function useTypewriter(roles = ROLES) {
     const timeout = setTimeout(
       () => {
         if (!isDeleting) {
-          // Still typing
           if (displayed.length < current.length) {
             setDisplayed(current.slice(0, displayed.length + 1));
           } else {
-            // Fully typed — pause before deleting
             setIsPaused(true);
             setTimeout(() => {
               setIsPaused(false);
@@ -40,11 +37,9 @@ export default function useTypewriter(roles = ROLES) {
             }, PAUSE_END);
           }
         } else {
-          // Deleting
           if (displayed.length > 0) {
             setDisplayed(current.slice(0, displayed.length - 1));
           } else {
-            // Fully deleted — pause before typing next
             setIsDeleting(false);
             setIsPaused(true);
             setTimeout(() => {

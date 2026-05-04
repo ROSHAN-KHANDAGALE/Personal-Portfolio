@@ -11,7 +11,7 @@ export default function Navbar({ theme, toggleTheme }) {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      // Calculate how far user has scrolled through the page (0–100)
+   
       const scrollTop = window.scrollY;
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
@@ -31,7 +31,6 @@ export default function Navbar({ theme, toggleTheme }) {
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
-        {/* Logo */}
         <div
           className={styles.logo}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -39,7 +38,6 @@ export default function Navbar({ theme, toggleTheme }) {
           RK<span>.</span>
         </div>
 
-        {/* Desktop links */}
         <ul className={styles.navLinks}>
           {NAV_LINKS.map((link) => (
             <li key={link}>
@@ -48,7 +46,6 @@ export default function Navbar({ theme, toggleTheme }) {
           ))}
         </ul>
 
-        {/* Actions */}
         <div className={styles.actions}>
           <a
             className={styles.cvBtn}
@@ -76,7 +73,6 @@ export default function Navbar({ theme, toggleTheme }) {
           </button>
         </div>
 
-        {/* Hamburger */}
         <button
           className={styles.burger}
           onClick={() => setMobileOpen(true)}
@@ -95,7 +91,6 @@ export default function Navbar({ theme, toggleTheme }) {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
       <div className={`${styles.mobileMenu} ${mobileOpen ? styles.open : ""}`}>
         <button
           className={styles.mobileClose}

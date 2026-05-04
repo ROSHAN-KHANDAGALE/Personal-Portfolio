@@ -1,4 +1,3 @@
-// src/components/Contact/Contact.jsx
 import { useState } from "react";
 import { CONTACT_LINKS } from "../../data/index";
 import { sendEmail, isConfigured } from "../../utils/emailjs";
@@ -7,7 +6,6 @@ import styles from "./Contact.module.css";
 
 const INITIAL_FORM = { name: "", email: "", subject: "", message: "" };
 
-// Maps icon key from data/index.js → SVG component
 function ContactIcon({ name }) {
   const props = { size: 20 };
   switch (name) {
@@ -24,7 +22,7 @@ function ContactIcon({ name }) {
 
 export default function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
-  const [status, setStatus] = useState(null); // { type: "success"|"error"|"sending", msg }
+  const [status, setStatus] = useState(null);
   const [sending, setSending] = useState(false);
 
   const onChange = (e) =>
@@ -88,7 +86,6 @@ export default function Contact() {
         </div>
 
         <div className={styles.grid}>
-          {/* Left — contact info */}
           <div className="reveal">
             <h3 className={styles.heading}>Open to opportunities</h3>
             <p className={styles.subtext}>
@@ -119,7 +116,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — contact form */}
           <div className="reveal rd2">
             <form className={styles.form} onSubmit={onSubmit} noValidate>
               <div className={styles.formRow}>
@@ -186,7 +182,6 @@ export default function Contact() {
   );
 }
 
-// Small reusable label + input wrapper
 function FormGroup({ label, children }) {
   return (
     <div

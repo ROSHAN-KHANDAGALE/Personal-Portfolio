@@ -1,6 +1,3 @@
-/* src/components/CommandPalette/CommandPalette.module.css */
-
-/* ── Backdrop ── */
 .backdrop {
   position: fixed;
   inset: 0;
@@ -10,7 +7,6 @@
   animation: fadeIn 0.15s ease;
 }
 
-/* ── Palette container ── */
 .palette {
   position: fixed;
   top: 18%;
@@ -36,7 +32,6 @@
   to   { opacity: 1; transform: translateX(-50%) translateY(0)     scale(1);    }
 }
 
-/* ── Search row ── */
 .searchRow {
   display: flex;
   align-items: center;
@@ -91,7 +86,6 @@
   background: var(--border);
 }
 
-/* ── Results list ── */
 .list {
   max-height: 360px;
   overflow-y: auto;
@@ -100,7 +94,6 @@
 .list::-webkit-scrollbar { width: 3px; }
 .list::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* ── Group ── */
 .group { padding: 0 0.5rem; }
 
 .groupLabel {
@@ -112,7 +105,6 @@
   padding: 0.6rem 0.75rem 0.3rem;
 }
 
-/* ── Command item ── */
 .item {
   display: flex;
   align-items: center;
@@ -147,7 +139,6 @@
   flex-shrink: 0;
 }
 
-/* ── Empty state ── */
 .empty {
   padding: 2rem;
   text-align: center;
@@ -157,7 +148,6 @@
 }
 .empty strong { color: var(--accent); }
 
-/* ── Footer ── */
 .footer {
   display: flex;
   gap: 1.5rem;

@@ -6,7 +6,6 @@ export default function GitHubGraph() {
     <section id="github" className={styles.section}>
       <div className="container">
         <div className={styles.calendarLayout}>
-          {/* Left — summary stats */}
           <div className={styles.calendarSummary}>
             <div className={styles.summaryItem}>
               <span className={styles.summaryNum}>55</span>
@@ -27,7 +26,6 @@ export default function GitHubGraph() {
             </div>
           </div>
 
-          {/* Right — calendar */}
           <div className={styles.calendarWrap}>
             <GitHubCalendar
               username="ROSHAN-KHANDAGALE"
@@ -52,7 +50,6 @@ export default function GitHubGraph() {
             />
           </div>
 
-          {/* Stats row */}
           <div className={styles.statsRow}>
             <StatPill label="Profile" value="ROSHAN-KHANDAGALE" />
             <StatPill label="Platform" value="GitHub" />

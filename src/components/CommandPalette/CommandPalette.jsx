@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./CommandPalette.module.css";
 
-// ── All available commands ──────────────────────────────────
+
 const COMMANDS = [
-  // Navigation
   {
     id: "home",
     group: "Navigate",
@@ -77,7 +76,6 @@ const COMMANDS = [
     target: "contact",
   },
 
-  // Links
   {
     id: "gh-profile",
     group: "Links",
@@ -111,7 +109,6 @@ const COMMANDS = [
     target: "/Roshan_Khandagale_CV.pdf",
   },
 
-  // Actions
   {
     id: "theme",
     group: "Actions",
@@ -130,7 +127,6 @@ const COMMANDS = [
   },
 ];
 
-// Group commands by their group key
 function groupCommands(commands) {
   return commands.reduce((acc, cmd) => {
     if (!acc[cmd.group]) acc[cmd.group] = [];
@@ -142,11 +138,11 @@ function groupCommands(commands) {
 export default function CommandPalette({ toggleTheme }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [focused, setFocused] = useState(0); // index in filtered list
+  const [focused, setFocused] = useState(0); 
   const inputRef = useRef(null);
   const listRef = useRef(null);
 
-  // ── Filter commands by query ──────────────────────────────
+ 
   const filtered =
     query.trim() === ""
       ? COMMANDS
@@ -158,7 +154,7 @@ export default function CommandPalette({ toggleTheme }) {
 
   const grouped = groupCommands(filtered);
 
-  // ── Open / close ──────────────────────────────────────────
+
   const openPalette = useCallback(() => {
     setOpen(true);
     setQuery("");
@@ -169,7 +165,7 @@ export default function CommandPalette({ toggleTheme }) {
     setQuery("");
   }, []);
 
-  // ── Global keyboard listener — Cmd+K / Ctrl+K ─────────────
+
   useEffect(() => {
     const onKeyDown = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
@@ -182,12 +178,12 @@ export default function CommandPalette({ toggleTheme }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, openPalette, closePalette]);
 
-  // ── Focus input when opened ───────────────────────────────
+
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 50);
   }, [open]);
 
-  // ── Arrow key navigation inside list ─────────────────────
+
   const onInputKeyDown = (e) => {
     if (e.key === "ArrowDown") {
       e.preventDefault();
@@ -203,18 +199,18 @@ export default function CommandPalette({ toggleTheme }) {
     }
   };
 
-  // Scroll focused item into view
+
   useEffect(() => {
     const el = listRef.current?.querySelector(`[data-focused="true"]`);
     el?.scrollIntoView({ block: "nearest" });
   }, [focused]);
 
-  // Reset focused index when query changes
+ 
   useEffect(() => {
     setFocused(0);
   }, [query]);
 
-  // This belongs in CommandPalette.jsx ONLY — not Navbar.jsx
+
   useEffect(() => {
     const onKeyDown = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "/") {
@@ -227,7 +223,6 @@ export default function CommandPalette({ toggleTheme }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, openPalette, closePalette]);
 
-  // ── Execute a command ─────────────────────────────────────
   const executeCommand = (cmd) => {
     closePalette();
     switch (cmd.action) {
@@ -236,7 +231,7 @@ export default function CommandPalette({ toggleTheme }) {
           document
             .getElementById(cmd.target)
             ?.scrollIntoView({ behavior: "smooth" });
-        }, 150); // slight delay so palette closes first
+        }, 150); 
         break;
       case "link":
         window.open(
@@ -255,23 +250,20 @@ export default function CommandPalette({ toggleTheme }) {
     }
   };
 
-  // ── Flat index tracker for arrow key focus ────────────────
+
   let flatIndex = 0;
 
   if (!open) return null;
 
   return (
     <>
-      {/* Backdrop */}
       <div className={styles.backdrop} onClick={closePalette} />
 
-      {/* Palette */}
       <div
         className={styles.palette}
         role="dialog"
         aria-label="Command palette"
       >
-        {/* Search input */}
         <div className={styles.searchRow}>
           <span className={styles.searchIcon}>⌘</span>
           <input
@@ -294,7 +286,6 @@ export default function CommandPalette({ toggleTheme }) {
 
         <div className={styles.divider} />
 
-        {/* Results */}
         <div className={styles.list} ref={listRef}>
           {filtered.length === 0 ? (
             <div className={styles.empty}>
@@ -303,10 +294,8 @@ export default function CommandPalette({ toggleTheme }) {
           ) : (
             Object.entries(grouped).map(([group, cmds]) => (
               <div key={group} className={styles.group}>
-                {/* Group label */}
                 <div className={styles.groupLabel}>{group}</div>
 
-                {/* Commands in group */}
                 {cmds.map((cmd) => {
                   const isFocused = flatIndex === focused;
                   const currentIndex = flatIndex;
@@ -331,7 +320,6 @@ export default function CommandPalette({ toggleTheme }) {
           )}
         </div>
 
-        {/* Footer hints */}
         <div className={styles.footer}>
           <span>
             <kbd>↑</kbd>

@@ -1,5 +1,3 @@
-/* src/components/Experience/Experience.module.css */
-
 .experience { background: var(--bg); }
 
 .timeline { position: relative; padding-left: 2rem; }

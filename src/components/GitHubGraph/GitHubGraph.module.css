@@ -20,7 +20,6 @@
   box-shadow: 0 8px 40px var(--glow);
 }
 
-/* ── Header ── */
 .cardHeader {
   display: flex;
   justify-content: space-between;
@@ -36,7 +35,6 @@
   gap: 8px;
 }
 
-/* Pulsing green dot */
 .dot {
   width: 8px; height: 8px;
   border-radius: 50%;
@@ -67,7 +65,6 @@
 }
 .ghLink:hover { color: var(--accent); }
 
-/* ── Calendar ── */
 .calendarWrap {
   overflow-x: auto;
   padding-bottom: 0.5rem;
@@ -75,7 +72,6 @@
   justify-content: center;
 }
 
-/* Override react-github-calendar default text color */
 .calendarWrap :global(.react-activity-calendar__legend-month),
 .calendarWrap :global(.react-activity-calendar__legend-weekday) {
   fill: var(--text-dim) !important;
@@ -83,7 +79,6 @@
   font-size: 12px !important;
 }
 
-/* ── Stats row ── */
 .statsRow {
   display: flex;
   gap: 1rem;
@@ -117,14 +112,12 @@
 }
 .accentValue { color: var(--accent); }
 
-/* ── Two column calendar layout ── */
 .calendarLayout {
   display: flex;
   align-items: center;
   gap: 2.5rem;
 }
 
-/* ── Left summary panel ── */
 .calendarSummary {
   display: flex;
   flex-direction: column;
@@ -169,14 +162,12 @@
   width: 100%;
 }
 
-/* ── Right calendar ── */
 .calendarWrap {
   overflow-x: auto;
   padding-bottom: 0.5rem;
   flex: 1;
 }
 
-/* ── Responsive — stack on mobile ── */
 @media (max-width: 768px) {
   .calendarLayout {
     flex-direction: column;

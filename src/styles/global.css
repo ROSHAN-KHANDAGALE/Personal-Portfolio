@@ -1,43 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
 
-/* ── CSS Variables ── */
 :root {
-  /* ── Backgrounds — deep graphite, slight warm tint ── */
+
   --bg:         #0e0f11;
   --bg2:        #141618;
   --bg3:        #1c1f23;
   --surface:    #21252b;
   --surface2:   #282d34;
 
-  /* ── Borders ── */
   --border:     rgba(255, 255, 255, 0.06);
   --border-a:   rgba(0, 210, 200, 0.35);
 
-  /* ── Typography ── */
   --text:       #eef0f3;
   --text-muted: #8892a0;
   --text-dim:   #444c58;
 
-  /* ── Accent palette ── */
-  --accent:     #00d2c8;   /* electric cyan — primary */
-  --accent2:    #67e8e4;   /* light cyan — links, values */
-  --accent3:    #00a8a0;   /* deep cyan — hover */
-  --accent4:    #e2b96f;   /* warm gold — secondary highlight */
+  --accent:     #00d2c8;   
+  --accent2:    #67e8e4;   
+  --accent3:    #00a8a0; 
+  --accent4:    #e2b96f;  
 
-  /* ── Glow ── */
   --glow:       rgba(0, 210, 200, 0.15);
   --glow2:      rgba(0, 210, 200, 0.08);
 
-  /* ── Fonts ── */
   --fd: 'Syne', sans-serif;
   --fm: 'Space Mono', monospace;
 
-  /* ── Misc ── */
   --r:  8px;
   --tr: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 
@@ -58,7 +50,6 @@ a:hover { color: var(--accent2); }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* ── Shared layout ── */
 section { padding: 100px 2rem; }
 
 .container {
@@ -67,7 +58,6 @@ section { padding: 100px 2rem; }
   width: 100%;
 }
 
-/* ── Section header ── */
 .section-header { margin-bottom: 4rem; }
 
 .section-tag {
@@ -98,7 +88,6 @@ section { padding: 100px 2rem; }
 }
 .section-title span { color: var(--accent); }
 
-/* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -110,7 +99,6 @@ section { padding: 100px 2rem; }
 .rd3 { transition-delay: .3s; }
 .rd4 { transition-delay: .4s; }
 
-/* ── Shared buttons ── */
 .btn-primary {
   font-family: var(--fm);
   font-size: 0.75rem;
@@ -155,7 +143,6 @@ section { padding: 100px 2rem; }
   transform: translateY(-2px);
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
   section { padding: 70px 1.25rem; }
 }

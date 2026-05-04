@@ -1,4 +1,3 @@
-// src/components/About/About.jsx
 import { GitHubIcon, LinkedInIcon, EmailIcon } from "../Icons/Icons";
 import styles from "./About.module.css";
 
@@ -41,7 +40,6 @@ export default function About() {
         </div>
 
         <div className={styles.grid}>
-          {/* Bio text */}
           <div className={`${styles.text} reveal`}>
             <p>
               I'm a <strong>Backend Developer and GenAI Engineer</strong> based
@@ -66,7 +64,6 @@ export default function About() {
             </p>
           </div>
 
-          {/* Detail cards */}
           <div className="reveal rd2">
             {DETAILS.map(({ icon, label, value, href }) => (
               <div key={label} className={styles.detailCard}>

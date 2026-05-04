@@ -1,4 +1,3 @@
-// src/components/Projects/Projects.jsx
 import { useState } from "react";
 import { PROJECTS } from "../../data/index";
 import styles from "./Projects.module.css";
@@ -28,7 +27,6 @@ export default function Projects() {
           </h2>
         </div>
 
-        {/* Filter buttons */}
         <div className={`${styles.filters} reveal`}>
           {FILTERS.map(({ key, label }) => (
             <button
@@ -41,7 +39,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Project cards */}
         <div className={styles.grid}>
           {visible.map((project, i) => (
             <ProjectCard key={project.num} project={project} delay={i % 3} />

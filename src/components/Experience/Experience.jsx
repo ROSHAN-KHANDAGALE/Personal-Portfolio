@@ -1,4 +1,3 @@
-// src/components/Experience/Experience.jsx
 import { EXPERIENCE } from "../../data";
 import styles from "./Experience.module.css";
 
