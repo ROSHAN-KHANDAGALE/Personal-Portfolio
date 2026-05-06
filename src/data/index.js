@@ -29,7 +29,7 @@ export const SKILLS = [
       "Hugging Face",
       "Transformers",
       "Embeddings",
-      "Vector Databases",
+      "Vector DB",
       "Prompt Engineering",
       "NLP",
       "Agentic AI",
@@ -40,7 +40,7 @@ export const SKILLS = [
   {
     icon: "🗄️",
     title: "Databases",
-    tags: ["PostgreSQL", "MongoDB", "MySQL", "Vector Store"],
+    tags: ["PostgreSQL", "MongoDB", "MySQL", "Vector DB"],
   },
   {
     icon: "🔌",
@@ -49,7 +49,7 @@ export const SKILLS = [
       "REST API Design",
       "Microservices",
       "Webhooks",
-      "JWT / OAuth",
+      "JWT / OAuth 2.0",
       "Pydantic",
       "Redis",
       "Celery",
@@ -58,17 +58,17 @@ export const SKILLS = [
   {
     icon: "☁️",
     title: "DevOps / Cloud",
-    tags: ["Docker", "Git / GitHub", "AWS (EC2, S3)", "GCP (Vertex AI)"],
+    tags: ["Docker", "CI/CD", "Git / GitHub", "GitHub Copilot", "AWS (EC2, S3)", "GCP (Vertex AI)"],
   },
   {
     icon: "📊",
     title: "Libraries & Tools",
-    tags: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Postman", "OpenCV"],
+    tags: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Postman"],
   },
   {
     icon: "⚡",
     title: "Methodologies",
-    tags: ["Agile / Scrum", "Code Reviews", "Unit Testing"],
+    tags: ["Agile / Scrum", "Code Reviews", "Unit Testing", "Code Optimization", "Clean Coding", "Documentation"],
   },
 ];
 
@@ -89,6 +89,7 @@ export const PROJECTS = [
       "Pydantic",
       "Redis",
       "Celery",
+      "Docker",
     ],
     github: "https://github.com/ROSHAN-KHANDAGALE/Pull-Request-Review-Pilot",
   },
