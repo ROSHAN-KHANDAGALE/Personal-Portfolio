@@ -180,17 +180,17 @@ REACT_APP_EMAILJS_SERVICE_ID=service_xxxxxxx
 REACT_APP_EMAILJS_TEMPLATE_ID=template_xxxxxxx
 ```
 
-> ⚠️ **Always restart the dev server after editing `.env`**
+> **Always restart the dev server after editing `.env`**
 
-> ⚠️ **Never commit `.env` to Git** — it's already in `.gitignore`.
+> **Never commit `.env` to Git** — it's already in `.gitignore`.
 
 ---
 
 ## 📄 Adding Your Resume
 
-1. Place your CV PDF inside the `public/` folder:
+1. Place your CV PDF link inside the `.env` folder:
    ```
-   public/Roshan_Khandagale_CV.pdf
+   REACT_APP_CV_URL=https://drive.google.com/uc?export=download&id=CV_ID
    ```
 2. The **↓ Resume** button in the navbar will automatically download it.
 
@@ -293,7 +293,7 @@ npm run deploy
 
 ---
 
-## 🎨 Customising the Theme
+## Customising the Theme
 
 All colours are CSS variables in `src/styles/global.css`:
 
