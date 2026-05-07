@@ -47,10 +47,10 @@ export const SKILLS = [
     title: "API & Architecture",
     tags: [
       "REST API Design",
-      "Microservices",
       "Webhooks",
-      "JWT / OAuth 2.0",
+      "Microservices",
       "Pydantic",
+      "JWT / OAuth 2.0",
       "Redis",
       "Celery",
     ],
@@ -58,7 +58,14 @@ export const SKILLS = [
   {
     icon: "☁️",
     title: "DevOps / Cloud",
-    tags: ["Docker", "CI/CD", "Git / GitHub", "GitHub Copilot", "AWS (EC2, S3)", "GCP (Vertex AI)"],
+    tags: [
+      "Git / GitHub",
+      "Docker",
+      "CI/CD",
+      "GitHub Copilot",
+      "AWS (EC2, S3)",
+      "GCP (Vertex AI)",
+    ],
   },
   {
     icon: "📊",
@@ -68,7 +75,14 @@ export const SKILLS = [
   {
     icon: "⚡",
     title: "Methodologies",
-    tags: ["Agile / Scrum", "Code Reviews", "Unit Testing", "Code Optimization", "Clean Coding", "Documentation"],
+    tags: [
+      "Agile / Scrum",
+      "Code Reviews",
+      "Unit Testing",
+      "Clean Coding",
+      "Code Optimization",
+      "Documentation",
+    ],
   },
 ];
 
