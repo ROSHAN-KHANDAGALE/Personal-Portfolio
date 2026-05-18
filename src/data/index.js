@@ -33,6 +33,7 @@ export const SKILLS = [
       "Prompt Engineering",
       "NLP",
       "Agentic AI",
+      "CrewAI",
       "LangChain",
       "LangGraph",
     ],
