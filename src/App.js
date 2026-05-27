@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import useReveal from "./hooks/useReveal";
 
 import Navbar from "./components/Navbar/Navbar";
