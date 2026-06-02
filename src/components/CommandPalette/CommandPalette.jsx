@@ -108,15 +108,6 @@ const COMMANDS = [
     action: "link",
     target: "/Roshan_Khandagale_CV.pdf",
   },
-
-  {
-    id: "theme",
-    group: "Actions",
-    icon: "🎨",
-    label: "Toggle Dark / Light Mode",
-    action: "theme",
-    target: null,
-  },
   {
     id: "top",
     group: "Actions",
@@ -238,9 +229,6 @@ export default function CommandPalette({ toggleTheme }) {
           cmd.target,
           cmd.target.startsWith("http") ? "_blank" : "_self",
         );
-        break;
-      case "theme":
-        toggleTheme();
         break;
       case "top":
         window.scrollTo({ top: 0, behavior: "smooth" });
