@@ -6,6 +6,7 @@ const ROLES = [
   "API Architect",
   "LLM Integration Dev",
   "FastAPI Dev",
+  "Software Engineer",
 ];
 
 const TYPE_SPEED = 80; 
